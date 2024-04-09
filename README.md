@@ -1,3 +1,3 @@
 # homebrew-teradata
 
-Add more info
+Add more info here
