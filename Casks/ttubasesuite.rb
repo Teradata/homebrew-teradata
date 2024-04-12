@@ -1,4 +1,4 @@
-cask "ttu-base-suite" do
+cask "ttubasesuite" do
   version "20.00.07.00,2024-02"
   sha256 "052d354f4cf40a876155e193457261a13588576b03053c7defa265826cf7aeff"
 
