@@ -1,6 +1,6 @@
 cask "ttubasesuite" do
-  version "20.00.07.00,2024-02"
-  sha256 "052d354f4cf40a876155e193457261a13588576b03053c7defa265826cf7aeff"
+  version "20.00.11.00,2024-05"
+  sha256 "b18e9923b881071bd116cee07d726edd138303bf0bedcc19e3a634700a16ef42"
 
   url "https://downloads.teradata.com/sites/default/files/#{version.csv.second}/TeradataToolsAndUtilities-macosx-brew-#{version.csv.first}.tar"
   name "Teradata Tools and Utilities"
@@ -17,10 +17,7 @@ cask "ttubasesuite" do
 
   depends_on macos: ">= :catalina"
 
-  installer script: {
-    executable: "silent-install.sh",
-    sudo:       true,
-  }
+  pkg "TeradataToolsAndUtilities#{version.csv.first}.pkg"
 
   uninstall script:  {
               executable: "silent-uninstall.sh",
@@ -30,4 +27,8 @@ cask "ttubasesuite" do
             pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
 
   zap trash: "~/Library/Saved Application State/com.teradata.TTUListProducts.savedState"
+
+  caveats do
+    license "https://downloads.teradata.com/download/license/download-agreement-teradata-tools-utilities"
+  end
 end
