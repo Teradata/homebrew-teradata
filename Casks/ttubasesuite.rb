@@ -1,6 +1,6 @@
 cask "ttubasesuite" do
-  version "20.00.32.00,2026-02"
-  sha256 "6a37cea1895c4e600eeeca2e4cdac6487a682bf0abc65fb8f1fed9ce39c403c5"
+  version "20.00.33.00,2026-03"
+  sha256 "273e9cba641a3532695b8e02b442dd62bd6043f9df9614251a062d26a700ccff"
 
   url "https://downloads.teradata.com/sites/default/files/#{version.csv.second}/TeradataToolsAndUtilities-macosx-brew-#{version.csv.first}.tar"
   name "Teradata Tools and Utilities"
