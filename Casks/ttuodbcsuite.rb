@@ -1,6 +1,6 @@
 cask "ttuodbcsuite" do
-  version "20.00.33.00,2026-03"
-  sha256 "7011eb41f397547c49ea2d078bfbdae6913c5ea5531e3ace18b469ea37e4eb2f"
+  version "20.00.34.00,2026-04"
+  sha256 "e93f91c371c0e68e97018656d4bd89e3324eade18e39ee9f39b62db170ebd4d2"
 
   url "https://downloads.teradata.com/sites/default/files/#{version.csv.second}/TeradataODBC-macosx-brew-#{version.csv.first}.tar"
   name "Teradata Tools and Utilities"
