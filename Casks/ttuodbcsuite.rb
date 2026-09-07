@@ -15,7 +15,7 @@ cask "ttuodbcsuite" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :big_sur
 
   pkg "TeradataODBC#{version.csv.first}.pkg"
 
