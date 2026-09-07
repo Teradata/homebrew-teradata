@@ -15,7 +15,7 @@ cask "ttubasesuite" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :big_sur
 
   pkg "TeradataToolsAndUtilities#{version.csv.first}.pkg"
 
