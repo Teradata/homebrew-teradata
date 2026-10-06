@@ -1,6 +1,6 @@
 cask "ttuodbcsuite" do
-  version "20.00.39.00,2026-09"
-  sha256 "54e6b05cafc3143678f1a18168fc734437c068e80c50cdf44cd2b3977122ab0c"
+  version "20.00.40.00,2026-10"
+  sha256 "a45e6b5157a3f4452401c42de979e22be013512bfc5fcac5935bf2a5ce3fb68e"
 
   url "https://downloads.teradata.com/sites/default/files/#{version.csv.second}/TeradataODBC-macosx-brew-#{version.csv.first}.tar"
   name "Teradata Tools and Utilities"
@@ -15,6 +15,8 @@ cask "ttuodbcsuite" do
     end
   end
 
+  # Minimum supported macOS. A bare symbol means ">=" (Homebrew PR #22185),
+  # so this is macOS 11 and newer.
   depends_on macos: :big_sur
 
   pkg "TeradataODBC#{version.csv.first}.pkg"
