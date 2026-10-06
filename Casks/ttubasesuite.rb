@@ -1,6 +1,6 @@
 cask "ttubasesuite" do
-  version "20.00.39.00,2026-09"
-  sha256 "4f9827598198484face083859c0753ad927866c5c08c3a407e80b5aa3455e0c6"
+  version "20.00.40.00,2026-10"
+  sha256 "86dc8a9ccfc1370805fa58b14e894c6a7f27dbc799a16ba218bad6de69134729"
 
   url "https://downloads.teradata.com/sites/default/files/#{version.csv.second}/TeradataToolsAndUtilities-macosx-brew-#{version.csv.first}.tar"
   name "Teradata Tools and Utilities"
@@ -15,6 +15,8 @@ cask "ttubasesuite" do
     end
   end
 
+  # Minimum supported macOS. A bare symbol means ">=" (Homebrew PR #22185),
+  # so this is macOS 11 and newer.
   depends_on macos: :big_sur
 
   pkg "TeradataToolsAndUtilities#{version.csv.first}.pkg"
